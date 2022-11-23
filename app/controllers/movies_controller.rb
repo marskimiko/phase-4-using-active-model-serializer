@@ -1,10 +1,10 @@
 class MoviesController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
 
-  def index
-    movies = Movie.all
-    render json: movies
-  end
+  # def index
+  #   movies = Movie.all
+  #   render json: movies
+  # end
 
   def show
     movie = Movie.find(params[:id])
